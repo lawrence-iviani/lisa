@@ -58,13 +58,41 @@ sudo apt-get install python3 python3-dev  python3-venv  sox alsa-utils build-ess
 This is useful to control the board when the wired is busy in an un-accessible network 
 https://www.raspberrypi.org/documentation/configuration/wireless/access-point-routed.md
 
-Network
+* The Wireless is set as static access point in the network 10.0.0.1/24 (Type C, 254 addresses)
+* The DHCP is set to serve address from 10.0.0.2/20
+* address is /lisa.wlan  or 10.0.0.1
+
+```batch
+
+# In order to work as an access point, the Raspberry Pi needs to have the hostapd access point software package installed:
+
+sudo apt install hostapd
+
+# Enable the wireless access point service and set it to start when your Raspberry Pi boots:
+
+sudo systemctl unmask hostapd
+sudo systemctl enable hostapd
+
+# In order to provide network management services (DNS, DHCP) to wireless clients, the Raspberry Pi needs to have the dnsmasq software package installed:
+
+sudo apt install dnsmasq
+
+# Finally, install netfilter-persistent and its plugin iptables-persistent. This utilty helps by saving firewall rules and restoring them when the Raspberry Pi boots:
+
+sudo DEBIAN_FRONTEND=noninteractive apt install -y netfilter-persistent iptables-persistent
+```
+
+**Install**
+
+
+
+**Network**
 SSID: Lisa.wlan (this is also the address of the bot)
 password: L1sa@sc0lTa
 
 ## AUDIO HAT 
 
-Two options were tested:
+Two audio hats are available:
 
 * [MATRIX Voice Standard Version](https://store.matrix.one/products/matrix-voice)
 * [ReSpeaker 4-Mic Array for Raspberry Pi](https://respeaker.io/4_mic_array/)
@@ -98,7 +126,7 @@ sudo apt install matrixio-kernel-modules
 sudo reboot
 ```
 
-**TODO: alsa file in /etc/asound.conf should be modified for non blocking acquisition**
+**Remeber to copy the ALSA file in ...**
 
 ### ReSpeaker 4-Mic Array for Raspberry Pi
 
@@ -119,7 +147,7 @@ sudo ./install.sh
 sudo reboot
 ```
 
-**TODO: alsa file with non blocking todo!!**
+**Remeber to copy the ALSA file in ...**
 
 ---------------
 
