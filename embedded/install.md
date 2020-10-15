@@ -87,11 +87,13 @@ Adjust based on your configuration the following file in [\etc\]([etc for 4-Mic 
 * /etc/dhcpcd.conf
 * /etc/dnsmasq.conf
 * /etc/sysctl.d/routed-ap.conf
+* /etc/hostapd/hostapd.conf
 
 **WiFi Network**
-SSID: Lisa.wlan (this is also the address of the bot)
-password: L1sa@sc0lTa
-See [wireless client](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md) for further info.
+In the file /etc/hostapd/hostapd.conf it is possible to set name and password of the access point.
+
+* SSID: Lisa.wlan (this is also the address of the bot)
+* password: L1sa@sc0lTa
 
 ## AUDIO HAT 
 
