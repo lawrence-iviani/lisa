@@ -154,6 +154,15 @@ git clone https://github.com/respeaker/seeed-voicecard.git
 cd seeed-voicecard
 sudo ./install.sh
 sudo reboot
+
+# for the led control
+sudo pip3 install spidev gpiozero
+
+# If you wanna try out
+cd hw
+git clone https://github.com/respeaker/4mics_hat.git
+cd /home/pi/4mics_hat
+python pixels_demo.py
 ```
 
 
