@@ -56,8 +56,7 @@ sudo apt-get install python3 python3-dev  python3-venv  sox alsa-utils build-ess
 ```
 
 ### Setup a hotspot wireless
-This is useful to control the board when the wired is busy in an un-accessible network 
-https://www.raspberrypi.org/documentation/configuration/wireless/access-point-routed.md
+This is useful to control the board when the wired is busy in an [un-accessible network](https://www.raspberrypi.org/documentation/configuration/wireless/access-point-routed.md)
 
 * The Wireless is set as static access point in the network 10.0.0.1/24 (Type C, 254 addresses)
 * The DHCP is set to serve address from 10.0.0.2/20
@@ -83,7 +82,7 @@ sudo apt install dnsmasq
 sudo DEBIAN_FRONTEND=noninteractive apt install -y netfilter-persistent iptables-persistent
 ```
 **Config File**
-Depending on the AUDIO HAT (see below) there are several files in etc (details in link above), adjust based on your configuration. These are:
+Adjust based on your configuration the following file in [\etc\]([etc for 4-Mic Array](https://github.com/lawrence-iviani/lisa/tree/main/configuration/all/etc)):
 
 * /etc/dhcpcd.conf
 * /etc/dnsmasq.conf
