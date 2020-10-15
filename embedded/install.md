@@ -82,10 +82,17 @@ sudo apt install dnsmasq
 
 sudo DEBIAN_FRONTEND=noninteractive apt install -y netfilter-persistent iptables-persistent
 ```
+**Config File**
+Depending on the AUDIO HAT (see below) there are several files in etc (details in link above), adjust based on your configuration. These are:
 
-**Network**
+* /etc/dhcpcd.conf
+* /etc/dnsmasq.conf
+* /etc/sysctl.d/routed-ap.conf
+
+**WiFi Network**
 SSID: Lisa.wlan (this is also the address of the bot)
 password: L1sa@sc0lTa
+See [wireless client](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md) for further info.
 
 ## AUDIO HAT 
 
