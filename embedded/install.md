@@ -253,8 +253,7 @@ See the README in [repos](https://github.com/lawrence-iviani/rhasspy-lisa-odas-h
 TODO
 
 ## ROS
-
-Just a placeholder, a specific module will be implemented separately.
+It is required to run a ROS node, see Lisa ROS Bridge
 
 ### INSTALL
 Extract from: [Installing ROS Melodic on the Raspberry Pi](http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Melodic%20on%20the%20Raspberry%20Pi), and adding the support for python3.
@@ -265,7 +264,7 @@ In general use the option -DPYTHON_EXECUTABLE=/usr/bin/python3 when using catkin
 $ sudo pip3 install  empy rospkg catkin_pkg  defusedxml netifaces roslibpy 
 ```
 
-Create the workspace
+Create the workspace to build ROS on the system (another workspace has to be created for the application).
 
 ```batch
 $ mkdir -p ~/dev/ros_build_catkin_ws
@@ -276,10 +275,7 @@ At this point install ROS in ```/opt/ros/melodic```, and it is compiled from sou
 ```batch
 sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3 --install-space /opt/ros/melodic
 ```
-### Development
 
 
-### Lisa ROS Bridge
-TODO!!!
-Example of bridge [ROS MQTT bridge](http://wiki.ros.org/mqtt_bridge)
-
+## Lisa ROS Bridge
+https://github.com/lawrence-iviani/lisa-mqtt-ros-bridge
