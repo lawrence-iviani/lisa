@@ -2,7 +2,8 @@
 
 ## OS
 
-See image.md
+For image installation see [installation see ](https://github.com/lawrence-iviani/lisa/blob/main/embedded/image.md)
+
 20201015: this guide is based on a Raspbian 32 bit arm7fh
 
 ## Setup The system
@@ -82,10 +83,6 @@ sudo apt install dnsmasq
 sudo DEBIAN_FRONTEND=noninteractive apt install -y netfilter-persistent iptables-persistent
 ```
 
-**Install**
-
-
-
 **Network**
 SSID: Lisa.wlan (this is also the address of the bot)
 password: L1sa@sc0lTa
@@ -121,6 +118,9 @@ sudo reboot
 
 * After reboot, install the MATRIX Kernel Modules as follows:
 
+**Install**
+Copy the files in your embedded system  [etc for Matrix Voice](https://github.com/lawrence-iviani/lisa/tree/main/configuration/Matrix%20Voice/etc)
+
 ```batch
 sudo apt install matrixio-kernel-modules
 sudo reboot
@@ -130,6 +130,7 @@ sudo reboot
 
 ### ReSpeaker 4-Mic Array for Raspberry Pi
 
+Copy the files in your embedded system  [etc for 4-Mic Array](https://github.com/lawrence-iviani/lisa/tree/main/configuration/Respaker%204%20mic/etc)
 [getting-started](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/#getting-started)
 
 
@@ -147,7 +148,6 @@ sudo ./install.sh
 sudo reboot
 ```
 
-**Remeber to copy the ALSA file in ...**
 
 ---------------
 
@@ -175,6 +175,20 @@ cd sw
 wget https://github.com/rhasspy/rhasspy/releases/download/v2.5.0/rhasspy_2.5.0_armhf.deb
 sudo apt install ./rhasspy_2.5.0_armhf.deb
 
+```
+
+### Tmuxinator
+Use tmuxinator to start stop session with all nodes, it exists a configuration file to run the entire solution from console.
+
+* install [github-tmuxinator](https://github.com/tmuxinator/tmuxinator).
+
+* Copy the files in pi/config [all for Matrix Voice](https://github.com/lawrence-iviani/lisa/tree/main/configuration/all/home/pi/config)
+This is normally in ~/.config/tmuxinator (please notice as .config is a hidden folder)
+
+Enjoy, simply use:
+
+```batch
+$ tmuxinator start lisa_rhasspy_full_start.yml
 ```
 
 ### Development
@@ -212,7 +226,6 @@ make install
 
 ```
 
-
 ## RHASSPY LISA ODAS HERMES
 
 This is the module used inside the Rhasspy environment to acquire ODAS sources. 
@@ -247,8 +260,9 @@ At this point install ROS in ```/opt/ros/melodic```, and it is compiled from sou
 sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3 --install-space /opt/ros/melodic
 ```
 ### Development
-TODO: Placeholder for notes
 
-#### Lisa ROS Bridge
+
+### Lisa ROS Bridge
+TODO!!!
 Example of bridge [ROS MQTT bridge](http://wiki.ros.org/mqtt_bridge)
 
