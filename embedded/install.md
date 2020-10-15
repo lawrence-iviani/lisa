@@ -4,7 +4,7 @@
 
 For image installation see [installation see ](https://github.com/lawrence-iviani/lisa/blob/main/embedded/image.md)
 
-20201015: this guide is based on a Raspbian 32 bit arm7fh
+20201015: this guide is based on a Raspbian 32 bit armhf
 
 ## Setup The system
 
