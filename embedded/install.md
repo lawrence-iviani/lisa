@@ -221,8 +221,13 @@ Use tmuxinator to start stop session with all nodes, it exists a configuration f
 ```batch
 sudo apt install ruby-full
 ```
+Run at least once 
 
-See ...
+```batch
+tmux source ~/.tmux.conf
+```
+
+See [Run the solution](https://github.com/lawrence-iviani/lisa/blob/main/embedded/install.md#run-the-entire-solution)
 
 ### Development
 [Check instructions here](https://rhasspy.readthedocs.io/en/latest/installation/#virtual-environment)
@@ -333,7 +338,7 @@ $ catkin_make
 ---------------
 # Run the entire solution
 
-* Be sure you have installed Tmuxinator
+* Be sure you have installed Tmuxinator, see See [install tmuxinator](https://github.com/lawrence-iviani/lisa/blob/main/embedded/install.md#tmuxinator)
 
 * Copy the files in pi/config [all for Matrix Voice](https://github.com/lawrence-iviani/lisa/tree/main/configuration/all/home/pi/config)
 This is normally in ~/.config/tmuxinator (please notice as .config is a hidden folder)
