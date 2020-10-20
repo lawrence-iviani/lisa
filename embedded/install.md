@@ -51,7 +51,7 @@ sudo apt-get install cmake
 
 # Development tools
 # Install only if you consider to develop an application
-sudo apt-get install python3 python3-dev  python3-venv  sox alsa-utils build-essential portaudio19-dev 
+sudo apt-get install python3 python3-dev  python3-venv  sox alsa-utils build-essential portaudio19-dev fftw3f
 
 ```
 
@@ -134,7 +134,7 @@ sudo apt install matrixio-kernel-modules
 sudo reboot
 ```
 
-**Remeber to copy the ALSA file in ...**
+**Remeber to copy the [ALSA asound.conf file](https://github.com/lawrence-iviani/lisa/blob/main/configuration/Matrix_Voice/etc/asound.conf) in /etc/**
 
 ### ReSpeaker 4-Mic Array for Raspberry Pi
 
@@ -165,6 +165,9 @@ cd /home/pi/4mics_hat
 python pixels_demo.py
 ```
 
+**NOTE: 20201020, I had to remove the folder /etc/alsa/*  it seems there is some uncompatible configuration. It happened after update of Rapbian and Seed. The reason are not clear **
+
+**Remeber to copy the [ALSA asound.conf file](https://github.com/lawrence-iviani/lisa/blob/main/configuration/Respeaker_4mic_array/etc/asound.conf) in /etc/**
 
 ---------------
 
@@ -246,7 +249,7 @@ make install
 ## RHASSPY LISA ODAS HERMES
 
 This is the module used inside the Rhasspy environment to acquire ODAS sources. 
-ODAS provides tracked and localized sources with a beamforming techinque
+ODAS provides tracked and localized sources with a beamforming techinque (when cloning use option --recurse-submodules)
 See the README in [repos](https://github.com/lawrence-iviani/rhasspy-lisa-odas-hermes)
 
 ### Development
