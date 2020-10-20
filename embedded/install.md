@@ -235,10 +235,10 @@ See [Run the solution](https://github.com/lawrence-iviani/lisa/blob/main/embedde
 [Check instructions here](https://rhasspy.readthedocs.io/en/latest/installation/#virtual-environment)
 ```batch
 
+## You should have something like this installed. Sometimes install automatically.
 sudo apt-get install  libatlas-base-dev swig supervisor mosquitto sox alsa-utils libgfortran4 espeak flite perl curl patchelf ca-certificates libttspico-utils
 
-# Install libttspico abd libttspico-utils
-# if apt-get fails, it has to be done manually
+## Install libttspico abd libttspico-utils, if apt-get fails, it has to be done manually
 mkdir deb
 cd deb
 wget http://ftp.us.debian.org/debian/pool/non-free/s/svox/libttspico0_1.0+git20130326-9_armhf.deb
@@ -246,20 +246,20 @@ wget http://ftp.us.debian.org/debian/pool/non-free/s/svox/libttspico-utils_1.0+g
 apt-get install -f ./libttspico0_1.0+git20130326-9_armhf.deb ./libttspico-utils_1.0+git20130326-9_armhf.deb
 cd ~
 
-# Create a sw folder
-mkdir dev
-cd dev
+## Create a sw folder
+mkdir sw
+cd sw
 
 git clone --recursive https://github.com/rhasspy/rhasspy
 cd rhasspy/
 
-# Use one of the two options
+## Use one of the two options
 # rhasspy run in virtual env
-./configure --enable-in-place  --disable-julius --disable-precise
+./configure  --disable-julius --disable-precise
 
-
-# Rhasspy shares the environment
+# Use the system environment
 ./configure --enable-in-place  --disable-julius --disable-precise --disable-virtualenv
+# In this case all the requirements must be satisfied manually
 
 make
 make install
