@@ -217,9 +217,10 @@ Note: relogin to have access
 ### Tmuxinator
 Use tmuxinator to start stop session with all nodes, it exists a configuration file to run the entire solution from console.
 
-* install [github-tmuxinator](https://github.com/tmuxinator/tmuxinator). Used version requires to install 
+* install [github-tmuxinator](https://github.com/tmuxinator/tmuxinator). 
 ```batch
-sudo apt install ruby-full
+# installed from repos though
+sudo apt install tmuxinator
 ```
 Run at least once 
 
