@@ -222,7 +222,8 @@ Use tmuxinator to start stop session with all nodes, it exists a configuration f
 # installed from repos though
 sudo apt install tmuxinator
 ```
-Run at least once 
+
+Copy the file in [home/pi/](https://github.com/lawrence-iviani/lisa/tree/main/configuration/all/home/pi/) and run at least once to configure tmux (not sure why is not loaded at runtime)
 
 ```batch
 tmux source ~/.tmux.conf
