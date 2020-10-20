@@ -43,15 +43,18 @@ alias l='ls -CF'
 sudo apt-get update
 sudo apt-get upgrade
 
-# install git
-sudo apt-get install git vim python3 python3-pip python3-setuptools python3-yaml
+# install git 
+sudo apt-get install git 
 
 # Building tools
-sudo apt-get install cmake
+sudo apt-get install cmake vim
+
+# install other dependencies library 
+sudo apt-get install  python3 python3-pip python3-setuptools python3-yaml libfftw3-3
 
 # Development tools
 # Install only if you consider to develop an application
-sudo apt-get install python3 python3-dev  python3-venv  sox alsa-utils build-essential portaudio19-dev fftw3f
+sudo apt-get install python3 python3-dev  python3-venv  sox alsa-utils build-essential portaudio19-dev  libfftw3-dev libconfig-dev  libjson-c-dev
 
 ```
 
@@ -162,10 +165,12 @@ sudo pip3 install spidev gpiozero
 cd hw
 git clone https://github.com/respeaker/4mics_hat.git
 cd /home/pi/4mics_hat
+
+# some packages like numpy has probably to be installed
+# sudo apt-get install libatlas-base-dev
 python pixels_demo.py
 ```
 
-**NOTE: 20201020, I had to remove the folder /etc/alsa/*  it seems there is some uncompatible configuration. It happened after update of Rapbian and Seed. The reason are not clear **
 
 **Remeber to copy the [ALSA asound.conf file](https://github.com/lawrence-iviani/lisa/blob/main/configuration/Respeaker_4mic_array/etc/asound.conf) in /etc/**
 
@@ -259,9 +264,10 @@ TODO
 It is required to run a ROS node, see Lisa ROS Bridge
 
 ### INSTALL
-Extract from: [Installing ROS Melodic on the Raspberry Pi](http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Melodic%20on%20the%20Raspberry%20Pi), and adding the support for python3.
+Follow the guide in  [Installing ROS Melodic on the Raspberry Pi](http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Melodic%20on%20the%20Raspberry%20Pi), and adding the support for python3. Follow all instructions for **ROS-Comm: (recommended)**
 In general use the option -DPYTHON_EXECUTABLE=/usr/bin/python3 when using catkin_make
 
+Furhter packages needed
 
 ```batch
 $ sudo pip3 install  empy rospkg catkin_pkg  defusedxml netifaces roslibpy 
@@ -270,8 +276,9 @@ $ sudo pip3 install  empy rospkg catkin_pkg  defusedxml netifaces roslibpy
 Create the workspace to build ROS on the system (another workspace has to be created for the application).
 
 ```batch
-$ mkdir -p ~/dev/ros_build_catkin_ws
-$ cd ~/dev/ros_build_catkin_ws
+$ mkdir -p ~/ros_build/ros_build_catkin_ws
+$ cd ~/ros_build/ros_build_catkin_ws
+$ mkdir src
 ```
 
 At this point install ROS in ```/opt/ros/melodic```, and it is compiled from source (it will take sometime)
