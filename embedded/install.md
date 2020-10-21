@@ -344,7 +344,8 @@ $ catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3
 # Is this necessary?
 
 
-# at this point it is necessary to run once 
+# at this point it is necessary to run every time to select the environment. 
+# could be added in .bashrc, eventually.
 $ source devel/setup.bash
 
 ```
