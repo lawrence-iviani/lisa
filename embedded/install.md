@@ -105,6 +105,10 @@ Two audio hats are available:
 * [MATRIX Voice Standard Version](https://store.matrix.one/products/matrix-voice)
 * [ReSpeaker 4-Mic Array for Raspberry Pi](https://respeaker.io/4_mic_array/)
 
+Only one should be installed. In order to making working, into the file [lisa.cfg](https://github.com/lawrence-iviani/rhasspy-lisa-odas-hermes/blob/master/rhasspy_lisa_odas_hermes/config/lisa.cfg) modify accordingly the line with one of the available hats:
+
+odas_config = lisa-odas/config/lisa//lisa_matrix.cfg || lisa-odas/config/lisa/respeaker_4_mic_array.cfg
+
 
 ### Install Matrix Software
 
@@ -196,7 +200,7 @@ dpkg-architecture | grep DEB_BUILD_ARCH=
 mkdir sw
 cd sw
 
-# more update version could be available, develpoed with this version
+# more update version could be available, develpoed with this version and 2.5.7 at a later stage
 wget https://github.com/rhasspy/rhasspy/releases/download/v2.5.0/rhasspy_2.5.0_armhf.deb
 sudo apt install ./rhasspy_2.5.0_armhf.deb
 
@@ -212,7 +216,7 @@ curl -sSL https://get.docker.com | sh
 # add your user the priviliegies
 sudo usermod -a -G docker $USER
 ```
-Note: relogin to have access
+**Note: relogin to have access! Sometime a reboot is necessary.**
 
 ### Tmuxinator
 Use tmuxinator to start stop session with all nodes, it exists a configuration file to run the entire solution from console.
@@ -350,8 +354,10 @@ $ source devel/setup.bash
 
 * Be sure you have installed Tmuxinator, see See [install tmuxinator](https://github.com/lawrence-iviani/lisa/blob/main/embedded/install.md#tmuxinator)
 
-* Copy the files in pi/config [all for Matrix Voice](https://github.com/lawrence-iviani/lisa/tree/main/configuration/all/home/pi/config)
+* Copy the files in [pi/.config](https://github.com/lawrence-iviani/lisa/tree/main/configuration/all/home/pi/config)
 This is normally in ~/.config/tmuxinator (please notice as .config is a hidden folder)
+
+* Check the asound.conf is the correct for your HAT and  [lisa.cfg](https://github.com/lawrence-iviani/rhasspy-lisa-odas-hermes/blob/master/rhasspy_lisa_odas_hermes/config/lisa.cfg) is pointing to the right ODAS configuration.
 
 Enjoy, simply use:
 
