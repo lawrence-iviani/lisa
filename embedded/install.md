@@ -334,7 +334,15 @@ $ git clone https://github.com/ros/actionlib.git
 $ git clone https://github.com/lawrence-iviani/lisa-interaction-msgs.git
 $ git clone https://github.com/lawrence-iviani/lisa-mqtt-ros-bridge.git
 $ cd ..
-$ catkin_make
+$ catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3
+# TODO: I have run also 
+# $ catkin_make install -DPYTHON_EXECUTABLE=/usr/bin/python3
+# Is this necessary?
+
+
+# at this point it is necessary to run once 
+$ source devel/setup.bash
+
 ```
 
 ---------------
