@@ -350,6 +350,12 @@ $ source devel/setup.bash
 
 ```
 
+## Lisa Led Manager
+
+**TODO**
+Component for Led management withing Hermes and Lisa via MQTT, in development.
+See: [rhasspy-lisa-led-manager](https://github.com/lawrence-iviani/rhasspy-lisa-led-manager)
+
 ---------------
 # Run the entire solution
 
