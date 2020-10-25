@@ -2,5 +2,5 @@
 
 pkill -f rhasspy*
 pkill -f lisa*
-pkill -f marytts*
+sudo pkill -f marytts*
 
