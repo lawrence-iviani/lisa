@@ -49,7 +49,6 @@ root: ~/
 #common:
 #  before_commands:
 
-
 pre_window:
   - source ~/.bashrc && source ~/sw/lisa_catkin_ws/devel/setup.bash  && tmux set-option -ga update-environment 'LISA_PLATFORM LISA_LED_PATTERN ROS_MASTER_URI ROS_IP'
   
@@ -67,7 +66,7 @@ windows:
       panes:
          - sleep 10 && cd ~/sw/rhasspy-lisa-odas-hermes && bin/rhasspy-lisa-odas-hermes --port 12183 --channel 4
          - sleep 15 && rosrun lisa-mqtt-ros-bridge bridge-node.py # :--call_intent_service
-         - sleep 10 && cd ~/sw/rhasspy-lisa-led-manager && bin/rhasspy-lisa-led-manager --port 12183 --debug --hw-board $LISA_PLATFORM --hw-board $LISA_PLATFORM
+         - sleep 10 && cd ~/sw/rhasspy-lisa-led-manager && bin/rhasspy-lisa-led-manager --port 12183 --debug --hw-board $LISA_PLATFORM --led-pattern $LISA_LED_PATTERN
   - console:
       layout: even-vertical
       panes:
