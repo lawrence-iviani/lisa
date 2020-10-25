@@ -21,8 +21,7 @@ use Raspberry imager (or any image creation tool)
 
 Go in [Raspberry Pi OS (Former Raspbian) page](https://www.raspberrypi.org/downloads/raspberry-pi-os/)
 And download the latest Raspberry Pi OS (32-bit) Lite Minimal image based on Debian Buster
-You can use the [Raspberry imager](https://www.raspberrypi.org/downloads/ 
-) 
+You can use the [Raspberry imager](https://www.raspberrypi.org/downloads/) 
 or any image creation tool like [Balena Etcher](https://www.balena.io/etcher/) or use the (new) imager tool
 from [Raspberry](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
 
