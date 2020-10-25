@@ -1,6 +1,18 @@
 # Lisa
-Documentation repos for LISA 
+Documentation repos for LISA, Listen and Infere Sound Automa.
+![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/lisa_logo_%201_lr.png)
 
+Lisa is embodied as a concurrent systems of nodes using MQTT and the Hermes Protocol. A wrapper to interact with ROS systems is available.
+An integration a further development of other open sources package, the most important:
+
+* [ODAS](https://github.com/introlab/odas/wiki)
+* [RHASSPY](https://rhasspy.readthedocs.io/en/latest/)
+* [ROS](https://www.ros.org/)
+
+
+See installation and usage [installation and usage](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/install.md) for an installation from scratch.
+
+Have a look [lisa node installation](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/lisa_node_installation.md) to check which packages are used.
 
 # SW Components
 
