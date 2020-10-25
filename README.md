@@ -30,6 +30,10 @@ Have a look [lisa node installation](https://github.com/lawrence-iviani/lisa/blo
 
 # External SW Components
 
+## ODAS
+[ODAS](https://github.com/introlab/odas) stands for Open embeddeD Audition System. This is a library dedicated to perform sound source localization, tracking, separation and post-filtering. ODAS is coded entirely in C, for more portability, and is optimized to run easily on low-cost embedded hardware. ODAS is free and open source.
+
+
 ## RHASSPY 
 
 [Rhasspy](https://rhasspy.readthedocs.io/en/latest/) (pronounced RAH-SPEE) is an open source, fully offline voice assistant toolkit for many languages that works well with Home Assistant, Hass.io, and Node-RED.
