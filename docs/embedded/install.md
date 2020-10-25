@@ -25,7 +25,7 @@ Two audio hats are available:
 * [MATRIX Voice Standard Version](https://store.matrix.one/products/matrix-voice)
 * [ReSpeaker 4-Mic Array for Raspberry Pi](https://respeaker.io/4_mic_array/)
 
-Details about the installation in (audio hat)[https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/audio_hat.md].
+Details about the installation in [audio hat](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/audio_hat.md).
 
 **Check the configuration of the board is set right.**
 In order to making working, into the file [lisa.cfg](https://github.com/lawrence-iviani/rhasspy-lisa-odas-hermes/blob/master/rhasspy_lisa_odas_hermes/config/lisa.cfg) modify accordingly the line with one of the available hats:
