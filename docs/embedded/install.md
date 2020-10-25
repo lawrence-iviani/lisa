@@ -5,13 +5,18 @@
 
 ## OS
 
-For image installation see [installation see ](https://github.com/lawrence-iviani/lisa/blob/main/embedded/image.md)
+For image installation see [image installation](https://github.com/lawrence-iviani/lisa/blob/main/embedded/image.md)
 
 20201015: this guide is based on a Raspbian 32 bit armhf
 
 ## Setup The system
 
-All what matters the raspberry and the basic package installation (pre-requisities and development).
+All what matters the raspberry and the basic package installation:
+* pre-requisities
+* development package 
+* wifi
+* hotspot
+See (Pi setup)[https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/pi.md].
 
 ## AUDIO HAT 
 
