@@ -20,10 +20,18 @@ Two audio hats are available:
 * [MATRIX Voice Standard Version](https://store.matrix.one/products/matrix-voice)
 * [ReSpeaker 4-Mic Array for Raspberry Pi](https://respeaker.io/4_mic_array/)
 
-Check the configuration is set right.
+Details about the installation in (audio hat)[https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/audio_hat.md].
+
+**Check the configuration of the board is set right.**
 In order to making working, into the file [lisa.cfg](https://github.com/lawrence-iviani/rhasspy-lisa-odas-hermes/blob/master/rhasspy_lisa_odas_hermes/config/lisa.cfg) modify accordingly the line with one of the available hats:
 
-odas_config = lisa-odas/config/lisa//lisa_matrix.cfg || lisa-odas/config/lisa/respeaker_4_mic_array.cfg
+```
+Inside cfg, adapt the following line
+
+odas_config = lisa-odas/config/lisa/CFG
+
+Where CFG = lisa_matrix.cfg || respeaker_4_mic_array.cfg
+```
 
 # SW
 
@@ -34,7 +42,7 @@ An integration a further development of other open sources package, the most imp
 * [RHASSPY](https://rhasspy.readthedocs.io/en/latest/)
 * [ROS](https://www.ros.org/)
 
-See the installation details in page [lisa node installation]() for making it up and running.
+See the installation details in page [lisa node installation](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/lisa_node_installation.md) for making it up and running.
 
 ## Configuration
 
@@ -55,7 +63,7 @@ $ python3 copy_util.py --to_lisa
 * Be sure you have installed Tmuxinator, see See [install tmuxinator](https://github.com/lawrence-iviani/lisa/blob/main/embedded/install.md#tmuxinator)
 
 * Copy the files in [pi/.config](https://github.com/lawrence-iviani/lisa/tree/main/configuration/all/home/pi/config)
-This is normally in ~/.config/tmuxinator (please notice as .config is a hidden folder)
+This is normally in ~/.config/tmuxinator (please notice as .config is a hidden folder) and copied with the configuration script.
 
 * Check the asound.conf is the correct for your HAT and  [lisa.cfg](https://github.com/lawrence-iviani/rhasspy-lisa-odas-hermes/blob/master/rhasspy_lisa_odas_hermes/config/lisa.cfg) is pointing to the right ODAS configuration.
 
