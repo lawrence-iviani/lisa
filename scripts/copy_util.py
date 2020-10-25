@@ -3,7 +3,6 @@ import sys, getopt
 import os, shutil
 
 
-
 # https://stackoverflow.com/questions/1868714/how-do-i-copy-an-entire-directory-of-files-into-an-existing-directory-using-pyth
 def copytree(src, dest, symlinks=False, ignore=None):
 	for item in os.listdir(src):
@@ -14,20 +13,24 @@ def copytree(src, dest, symlinks=False, ignore=None):
 			print ('recurse folder {} '.format(s))
 			recursive_overwrite(s, d, follow_symlinks=symlinks)
 		else:
-			copy_file(src, dest, follow_symlinks=follow_symlinks, use_sudo=False)
+			copy_file(src, dest, follow_symlinks=follow_symlinks, try_use_sudo=False)
 
 
 def recursive_overwrite(src, dest, follow_symlinks=False):
 	if os.path.isdir(src):
 		if not os.path.isdir(dest):
-			os.makedirs(dest)
+			try:
+				os.makedirs(dest)
+			except PermissionError as e:
+				print(e, '\nSKIPPING entire folder: ' + dest)
+				return
 		files = os.listdir(src)
 		for f in files:
 			recursive_overwrite(os.path.join(src, f), 
 								os.path.join(dest, f), 
 								follow_symlinks)
 	else:
-		copy_file(src, dest, follow_symlinks=follow_symlinks, use_sudo=False)
+		copy_file(src, dest, follow_symlinks=follow_symlinks, try_use_sudo=False)
 
 
 def copy_file(src, dest, follow_symlinks=False, try_use_sudo=False):
@@ -101,8 +104,9 @@ def main(argv):
 		sys.exit(2)
 	for opt, arg in opts:
 		if opt == '-h':
-			print ('copy_util.py: \n\tCopy both two direction from/to the actual repository folder and\n\t'
-					'\t $ copy_util.py -h | -t --to_lisa |-f --from_lisa ')
+			print ('copy_util.py: \n\tCopy all what matters configuration files in both two directions: \n'
+					'\tfrom or to lisa embedded and the actual repository folder. \n\tRun from lisa/scripts\n'
+					'\t $ python3 copy_util.py -h  --help || -t --to_lisa || -f --from_lisa ')
 			sys.exit(3)
 		elif opt in ("-t", "--to_lisa"):
 			direction = 'to'
@@ -113,11 +117,10 @@ def main(argv):
 		sys.exit(4)
 	if direction=='to':
 		for s in sections:
-			error
 			copytree('../configuration/'+s, default_root)
 	elif direction=='from':
 		for s in sections:
-			print(_header_operation('Searching '+s))
+			print(_header_operation('Searching: '+s))
 			# print('found from' + '../configuration/'+s + ': \n', get_files_from_tree('../configuration/'+s))
 			dest = get_files_from_tree('../configuration/'+s)
 			print('Found files: ' + str(dest))
@@ -133,11 +136,11 @@ def main(argv):
 			missed = [x for x in dest if x not in copied]
 			
 			print(_header_operation('Operation result for: '))
-			
 			print('Copied files: ' + str(copied))
 			print('Missed: ' + str(missed))
 	else:
 		print('not supported') 
+
 
 if __name__ == "__main__":
 	main(sys.argv[1:])
