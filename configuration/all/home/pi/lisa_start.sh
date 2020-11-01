@@ -20,13 +20,13 @@ lisa_interface=$(ip route get 8.8.8.8 | awk -F"dev " 'NR==1{split($2,a," ");prin
 # parsing input argument
 for ARGUMENT in "$@"
 do
-    if [ "$ARGUMENT" = "-h" ]; then
-		echo "Usage: ./lisa_start [-h] [$in_arg_session=TMUX_SESSION] [$in_arg_platform=BOARD] [$in_arg_pattern=LED_PATTERN] [$in_arg_ros_master_ip=ROS_MASTER_IP]"
-		echo "		-h: print this help and exit. "
+    if [ "$ARGUMENT" = "help" ]; then
+		echo "Usage: ./lisa_start [help] || [$in_arg_session=TMUX_SESSION] [$in_arg_platform=BOARD] [$in_arg_pattern=LED_PATTERN] [$in_arg_ros_master_ip=ROS_MASTER_IP]"
+		echo "		help: print this help and exit. "
 		echo "		TMUX_SESSION: lisa_rhasspy_full_start|lisa_rhasspy_full_start_LAB (Optional)"
 		echo "		BOARD: Respeaker4MicArray|MatrixVoice|DummyBoard (Optional)"
 		echo "		LED_PATTERN: GoogleHome|Alexa (Optional)"
-		echo "		ROS_MASTER_IP: the ip of the ros master to connect"
+		echo "		ROS_MASTER_IP: the ip of the ros master to connect, in the form ip:port (e.g 192.168.0.104:11311)"
 		exit
 	fi
 	KEY=$(echo $ARGUMENT | cut -f1 -d=)
@@ -54,12 +54,13 @@ export ROS_IP=$lisa_ip
 
 
 # wrapping up
+echo "Use $ ./start_lisa help for a list of options"
 echo "Starting session _>$default_session<- with follow: "
-echo "	local ip on interface	: "$ROS_IP " interface is " $lisa_interface
+echo "	local ip on interface			: "$ROS_IP " interface is " $lisa_interface
 echo "	ros master				: "$ROS_MASTER_URI
 echo "	platform				: "$LISA_PLATFORM
 echo "	led pattern				: "$LISA_LED_PATTERN
 echo 
-
+ 
 # finally, start
 tmuxinator start $default_session
