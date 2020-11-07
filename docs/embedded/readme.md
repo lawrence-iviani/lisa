@@ -1,3 +1,4 @@
+Full installation guide
 
 * [Full Installation](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/install.md)
 
