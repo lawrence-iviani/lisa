@@ -47,10 +47,10 @@ root: ~/
 # Runs after everything. Use it to attach to tmux with custom options etc.
 # post: tmux -CC attach -t lisa_rhasspy_full_start
 #common:
-#  before_commands:
-
+# before_commands:
+  
 pre_window:
-  - source ~/.bashrc && source ~/sw/lisa_catkin_ws/devel/setup.bash  && tmux set-option -ga update-environment 'LISA_PLATFORM LISA_LED_PATTERN ROS_MASTER_URI ROS_IP'
+  - source ~/.bashrc && source ~/sw/lisa_catkin_ws/devel/setup.bash  && tmux set-option -ga update-environment 'LISA_PLATFORM LISA_LED_PATTERN ROS_MASTER_URI ROS_IP' 
   
 windows:
   - rhasspy:
@@ -71,4 +71,8 @@ windows:
       layout: even-vertical
       panes:
          - cat ~/.tmux.conf
-
+  - console_2:
+      layout: even-vertical
+      panes:
+         - cat ~/.tmux.conf
+ 
