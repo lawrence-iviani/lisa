@@ -1,15 +1,21 @@
 {
     "command": {
         "webrtcvad": {
-            "min_sec": "1.5"
+            "before_sec": "1",
+            "min_sec": "4",
+            "silence_sec": "1",
+            "speech_sec": "0.5"
         }
     },
     "dialogue": {
         "system": "rhasspy"
     },
     "intent": {
+        "fsticuffs": {
+            "fuzzy": false
+        },
         "fuzzywuzzy": {
-            "min_confidence": "0.9"
+            "min_confidence": "0.6"
         },
         "system": "fsticuffs"
     },

@@ -14,7 +14,9 @@ in_arg_pattern="led_pattern"
 in_arg_ros_master_ip="ros_master"
 
 # from https://stackoverflow.com/questions/21336126/linux-bash-script-to-extract-ip-address
-lisa_ip=$(ip route get 8.8.8.8 | awk -F"src " 'NR==1{split($2,a," ");print a[1]}')
+# and https://unix.stackexchange.com/questions/8518/how-to-get-my-own-ip-address-and-save-it-to-a-variable-in-a-shell-script
+# lisa_ip=$(ip route get 8.8.8.8 | awk -F"src " 'NR==1{split($2,a," ");print a[1]}') # wont work if there is not a valid internet connecction
+lisa_ip=$(ifconfig | grep -A 1 'eth0' | tail -1 | awk -F"inet " 'NR==1{split($2,a," ");print a[1]}')
 lisa_interface=$(ip route get 8.8.8.8 | awk -F"dev " 'NR==1{split($2,a," ");print a[1]}')
 
 # parsing input argument

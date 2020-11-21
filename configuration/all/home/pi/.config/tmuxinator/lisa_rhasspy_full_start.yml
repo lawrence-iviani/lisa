@@ -64,7 +64,7 @@ windows:
   - rhasspy-lisa:
       layout: even-vertical
       panes:
-         - sleep 10 && cd ~/sw/rhasspy-lisa-odas-hermes && bin/rhasspy-lisa-odas-hermes --port 12183 --channel 4
+         - sleep 10 && cd ~/sw/rhasspy-lisa-odas-hermes && bin/rhasspy-lisa-odas-hermes --port 12183 --demux #--channel 4
          - sleep 15 && rosrun lisa-mqtt-ros-bridge bridge-node.py # :--call_intent_service
          - sleep 10 && cd ~/sw/rhasspy-lisa-led-manager && bin/rhasspy-lisa-led-manager --port 12183 --debug --hw-board $LISA_PLATFORM --led-pattern $LISA_LED_PATTERN
   - console:
