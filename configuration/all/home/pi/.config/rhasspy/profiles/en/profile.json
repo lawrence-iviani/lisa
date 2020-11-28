@@ -1,10 +1,11 @@
 {
     "command": {
         "webrtcvad": {
-            "before_sec": "1",
-            "min_sec": "4",
+            "before_sec": "0",
+            "min_sec": "2.5",
             "silence_sec": "1",
-            "speech_sec": "0.5"
+            "skip_sec": "0.75",
+            "speech_sec": "0.0"
         }
     },
     "dialogue": {
