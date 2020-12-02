@@ -103,7 +103,7 @@ In general use the option -DPYTHON_EXECUTABLE=/usr/bin/python3 when using catkin
 Furhter packages needed
 
 ```batch
-$ sudo pip3 install  empy rospkg catkin_pkg  defusedxml netifaces roslibpy 
+$ sudo pip3 install  empy rospkg catkin_pkg  defusedxml netifaces roslibpy pycryptodomex python-gnupg
 ```
 
 Create the workspace to build ROS on the system (another workspace has to be created for the application).
@@ -169,3 +169,18 @@ $ source devel/setup.bash
 **TODO**
 Component for Led management withing Hermes and Lisa via MQTT, in development.
 See: [rhasspy-lisa-led-manager](https://github.com/lawrence-iviani/rhasspy-lisa-led-manager)
+
+## Nodes Resource Monitor
+
+An external tool to collect statistics about nodes usage
+Some minor modification in a couple of conversion are needed 
+[RobotnikAutomation system_monitor](https://github.com/RobotnikAutomation/system_monitor)
+
+Used with rosbag to collect data and combined with an import 
+[rosbag_pandas](https://github.com/eurogroep/rosbag_pandas)
+
+Needed python packages in the host decoding the rosbag (e.g. virtual machine)
+
+```
+# pip3 install rospkg pycryptodomex python-gnupg rospy_message_converter
+```
