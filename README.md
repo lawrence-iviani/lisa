@@ -24,6 +24,8 @@ Have a look [lisa node installation](https://github.com/lawrence-iviani/lisa/blo
 
 * [lisa-interaction-msgs](https://github.com/lawrence-iviani/lisa-interaction-msgs), messages, services used by client, like rqt or flexbe states.
 
+* [lisa-shared-ws-flexbe-integration](https://github.com/lawrence-iviani/lisa_shared_ws_flexbe_integration)
+
 * [lisa-flexbe-states](https://github.com/lawrence-iviani/lisa-flexbe-states), flexbe states for beahvioural state machine with acoustic interaction.
 
 * [rhasspy-lisa-led-manager](https://github.com/lawrence-iviani/rhasspy-lisa-led-manager), led manager syncronized with the hermes protocol or API (todo).

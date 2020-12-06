@@ -60,15 +60,8 @@ See [Run the solution](https://github.com/lawrence-iviani/lisa/blob/main/embedde
 ## You should have something like this installed. Sometimes install automatically.
 sudo apt-get install  libatlas-base-dev swig supervisor mosquitto sox alsa-utils libgfortran4 espeak flite perl curl patchelf ca-certificates libttspico-utils
 
-## Install libttspico abd libttspico-utils, if apt-get fails, it has to be done manually
-mkdir deb
-cd deb
-wget http://ftp.us.debian.org/debian/pool/non-free/s/svox/libttspico0_1.0+git20130326-9_armhf.deb
-wget http://ftp.us.debian.org/debian/pool/non-free/s/svox/libttspico-utils_1.0+git20130326-9_armhf.deb
-apt-get install -f ./libttspico0_1.0+git20130326-9_armhf.deb ./libttspico-utils_1.0+git20130326-9_armhf.deb
-cd ~
-
 ## Create a sw folder
+# Note: most of the configuration are independent from the location, but some could fail
 mkdir sw
 cd sw
 
@@ -76,13 +69,16 @@ git clone --recursive https://github.com/rhasspy/rhasspy
 cd rhasspy/
 
 ## Use one of the two options
-# rhasspy run in virtual env
-./configure  --disable-julius --disable-precise
 
-# Use the system environment
-./configure --enable-in-place  --disable-julius --disable-precise --disable-virtualenv
-# In this case all the requirements must be satisfied manually
+# 1. Use the system environment
+./configure --enable-in-place --disable-virtualenv  
+# Note: possily some requirements has to be satisfied manually
 
+# 2.  rhasspy run in virtual env
+# probably it is necessary to change 
+./configure   --disable-pocketsphinx  --disable-julius  --disable-wavenet  --disable-larynx    --disable-precise 
+
+# for both
 make
 make install
 
@@ -107,7 +103,7 @@ In general use the option -DPYTHON_EXECUTABLE=/usr/bin/python3 when using catkin
 Furhter packages needed
 
 ```batch
-$ sudo pip3 install  empy rospkg catkin_pkg  defusedxml netifaces roslibpy 
+$ sudo pip3 install  empy rospkg catkin_pkg  defusedxml netifaces roslibpy pycryptodomex python-gnupg
 ```
 
 Create the workspace to build ROS on the system (another workspace has to be created for the application).
@@ -173,3 +169,18 @@ $ source devel/setup.bash
 **TODO**
 Component for Led management withing Hermes and Lisa via MQTT, in development.
 See: [rhasspy-lisa-led-manager](https://github.com/lawrence-iviani/rhasspy-lisa-led-manager)
+
+## Nodes Resource Monitor
+
+An external tool to collect statistics about nodes usage
+Some minor modification in a couple of conversion are needed 
+[RobotnikAutomation system_monitor](https://github.com/RobotnikAutomation/system_monitor)
+
+Used with rosbag to collect data and combined with an import 
+[rosbag_pandas](https://github.com/eurogroep/rosbag_pandas)
+
+Needed python packages in the host decoding the rosbag (e.g. virtual machine)
+
+```
+# pip3 install rospkg pycryptodomex python-gnupg rospy_message_converter
+```
