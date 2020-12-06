@@ -71,8 +71,8 @@ windows:
       layout: even-vertical
       panes:
          - cat ~/.tmux.conf
-  - console_2:
+  - sys-mon:
       layout: even-vertical
       panes:
-         - cat ~/.tmux.conf
+         - echo "Use github.com/RobotnikAutomation/system_monitor" && roslaunch system_monitor system_monitor.launch
  
