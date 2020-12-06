@@ -50,7 +50,7 @@ root: ~/
 # before_commands:
   
 pre_window:
-  - source ~/.bashrc && source ~/sw/lisa_catkin_ws/devel/setup.bash  && tmux set-option -ga update-environment 'LISA_PLATFORM LISA_LED_PATTERN ROS_MASTER_URI ROS_IP' 
+  - source ~/.bashrc && source ~/sw/lisa_catkin_ws/devel/setup.bash  && tmux set-option -ga update-environment 'LISA_PLATFORM LISA_LED_PATTERN ROS_MASTER_URI ROS_IP RH_SESSION' 
   
 windows:
   - rhasspy:
@@ -59,7 +59,7 @@ windows:
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - ~/sw/rhasspy/rhasspy.sh -p en
+        - ~/sw/rhasspy/rhasspy.sh -p $RH_SESSION
         - sleep 5 && docker run -it -p 59125:59125 synesthesiam/marytts:5.2
   - rhasspy-lisa:
       layout: even-vertical
@@ -71,8 +71,8 @@ windows:
       layout: even-vertical
       panes:
          - cat ~/.tmux.conf
-  - sys-mon:
+  - console_2:
       layout: even-vertical
       panes:
-         - echo "Use github.com/RobotnikAutomation/system_monitor" && roslaunch system_monitor system_monitor.launch
+         - cat ~/.tmux.conf
  
