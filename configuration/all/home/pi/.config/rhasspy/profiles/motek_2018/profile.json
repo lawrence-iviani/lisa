@@ -2,9 +2,9 @@
     "command": {
         "webrtcvad": {
             "before_sec": "0",
-            "min_sec": "2.5",
+            "min_sec": "3",
             "silence_sec": "1",
-            "skip_sec": "0.5",
+            "skip_sec": "1.5",
             "speech_sec": "0.0"
         }
     },

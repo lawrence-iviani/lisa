@@ -1,0 +1,60 @@
+{
+    "command": {
+        "webrtcvad": {
+            "before_sec": "0",
+            "min_sec": "2.5",
+            "silence_sec": "1",
+            "skip_sec": "0.5",
+            "speech_sec": "0.0"
+        }
+    },
+    "dialogue": {
+        "system": "rhasspy"
+    },
+    "intent": {
+        "fsticuffs": {
+            "fuzzy": false
+        },
+        "fuzzywuzzy": {
+            "min_confidence": "0.6"
+        },
+        "system": "fsticuffs"
+    },
+    "microphone": {
+        "pyaudio": {
+            "device": "1"
+        },
+        "system": "hermes"
+    },
+    "sounds": {
+        "system": "aplay"
+    },
+    "speech_to_text": {
+        "deepspeech": {
+            "mix_weight": "1"
+        },
+        "kaldi": {
+            "mix_weight": "0"
+        },
+        "system": "kaldi"
+    },
+    "text_to_speech": {
+        "marytts": {
+            "voice": "dfki-poppy-hsmm"
+        },
+        "system": "marytts"
+    },
+    "wake": {
+        "pocketsphinx": {
+            "keyphrase": "lisa"
+        },
+        "porcupine": {
+            "keyword_path": "terminator.ppn"
+        },
+        "snowboy": {
+            "apply_frontend": true,
+            "sensitivity": "0.8"
+        },
+        "system": "snowboy"
+    }
+}

@@ -4,8 +4,8 @@
             "before_sec": "0",
             "min_sec": "2.8",
             "silence_sec": "1",
-            "skip_sec": "0.6",
-            "speech_sec": "0.0"
+            "skip_sec": "0",
+            "speech_sec": "0"
         }
     },
     "dialogue": {
