@@ -28,4 +28,8 @@ if [ "$install_wifi" = true ]; then
 
 	sudo DEBIAN_FRONTEND=noninteractive apt install -y netfilter-persistent iptables-persistent
 
+	sudo cp ..configuration/all/etc/dhcpcd.conf /etc/dhcpcd.conf
+	sudo cp ../configuration/all/etc/dnsmasq.conf /etc/dnsmasq.conf
+	sudo cp ../configuration/all/etc/sysctl.d/routed-ap.conf /etc/sysctl.d/routed-ap.conf
+	sudo cp ../configuration/all/etc/hostapd/hostapd.conf /etc/hostapd/hostapd.conf
 fi
