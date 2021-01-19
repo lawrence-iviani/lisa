@@ -1,10 +1,12 @@
-Full installation guide
+# Full installation guide
 
-* [Full Installation](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/install.md)
+* [Full Installation](https://github.com/lawrence-iviani/lisa/blob/main/docs/install.md)
 
-Detailed pages:
+# Quick Start
 
 * [Install the image](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/image.md)
 * [Configure the Pi](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/pi.md)
+
+Skip to 
 * [Install the audio HAT](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/audio_hat.md)
 * [Install the LISA system and dependecies](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/lisa_node_installation.md)

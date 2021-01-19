@@ -1,4 +1,5 @@
-INSTALL
+
+20210119: this guide is based on a Raspbian 32 bit armhf
 
 # Image
 

@@ -77,5 +77,23 @@ cd /home/pi/4mics_hat
 python pixels_demo.py
 ```
 
+
+**Check the configuration of the board is set right.**
 VERY IMPORTANT: 
 **Remeber to copy the [ALSA asound.conf file](https://github.com/lawrence-iviani/lisa/blob/main/configuration/Respeaker_4mic_array/etc/asound.conf) in /etc/**
+
+
+# ODAS
+
+This is relevant for the beamforming platform ODAS. Similar to the alsa file also the ODAS file must be adapted with the proper hw platform.
+
+In order to making working, into the file [lisa.cfg](https://github.com/lawrence-iviani/rhasspy-lisa-odas-hermes/blob/master/rhasspy_lisa_odas_hermes/config/lisa.cfg) modify accordingly the line with one of the available hats:
+
+```
+Inside cfg, adapt the following line
+
+odas_config = lisa-odas/config/lisa/CFG
+
+Where CFG = lisa_matrix.cfg || respeaker_4_mic_array.cfg
+```
+

@@ -1,4 +1,10 @@
 
+All what matters the raspberry and the basic package installation:
+* pre-requisities
+* development package 
+* wifi
+* hotspot
+
 
 # First Run, configure the Raspberry
 
