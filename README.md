@@ -7,14 +7,20 @@ An integration a further development of other open sources package, the most imp
 
 * [ODAS](https://github.com/introlab/odas/wiki)
 * [RHASSPY](https://rhasspy.readthedocs.io/en/latest/)
+
+For my [thesis](https://www.dropbox.com/s/nq09ug1i9p7nsnz/Liviani_Thesis_booka4_final.pdf?dl=0) at the [FZI](https://www.fzi.de/de/forschung/forschungsfelder/detail/ffeld/service-robotik-und-mobile-manipulation/) a collaborative application in a shared workspace, based on [KolRob](http://kolrob.de/), was developed. 
+An extension with the robot was performed using:
 * [ROS](https://www.ros.org/)
+* [FlexBE](http://wiki.ros.org/flexbe)
+
+## Installation
+
+See in  [readme in docs](https://github.com/lawrence-iviani/lisa/blob/main/docs/readme.md) for a quick start and installation from scratch (hw included).
 
 
-See installation and usage [installation and usage](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/install.md) for an installation from scratch.
+## LISA SW Components
 
-Have a look [lisa node installation](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/lisa_node_installation.md) to check which packages are used.
-
-# SW Components
+TODO: Add picture 5.12
 
 * [rhasspy-lisa-odas-hermes](https://github.com/lawrence-iviani/rhasspy-lisa-odas-hermes), the input module for Rhasspy. Acquire and select the track(s) and stream via Hermes protocol.
 
@@ -42,7 +48,7 @@ Have a look [lisa node installation](https://github.com/lawrence-iviani/lisa/blo
 
 ## Speech Recognition
 
-ASR engine used.
+ASR engine used and evaluted.
 
 ### KALDI 
 
@@ -50,6 +56,12 @@ ASR engine used.
 
 ### DEEPSPEECH
 
+Only evaluated:
+
 [DeepSpeech](https://github.com/mozilla/DeepSpeech) is an open source Speech-To-Text engine, using a model trained by machine learning techniques based on Baidu's Deep Speech research paper. Project DeepSpeech uses Google's TensorFlow to make the implementation easier.
 
 Documentation for installation, usage, and training models is available on [deepspeech.readthedocs.io](http://deepspeech.readthedocs.io/?badge=latest)
+
+# Results
+
+In Processing ;)

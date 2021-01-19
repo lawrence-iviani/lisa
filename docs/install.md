@@ -18,14 +18,7 @@ See [Audio HATS](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded
 
 # SW packages
 
-## ROS
-
-
-
 ## LISA 
-
-### Installation
-
 
 Lisa is embodied as a concurrent systems of nodes using MQTT and the Hermes Protocol. A wrapper to interact with ROS systems is available.
 An integration a further development of other open sources package, the most important:
@@ -33,9 +26,21 @@ An integration a further development of other open sources package, the most imp
 * [ODAS](https://github.com/introlab/odas/wiki)
 * [RHASSPY](https://rhasspy.readthedocs.io/en/latest/)
 * [ROS](https://www.ros.org/)
+* FlexBE
 
-See the installation details in page [lisa node installation](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/lisa_node_installation.md) for making it up and running.
+TODO: FIGURE 
 
+### Installation
+
+The following packages should be installed for setup lisa
+
+* [Rhasspy](https://github.com/lawrence-iviani/lisa/blob/main/docs/lisa/rhasspy_installation.md)
+* [Lisa Hermes Wrapper](https://github.com/lawrence-iviani/lisa/blob/main/docs/lisa/lisa.md)
+
+The following packages should be installed for setup lisa with a ROS extension and FlexBE status
+* [ROS Extension](https://github.com/lawrence-iviani/lisa/blob/main/docs/lisa/ros_extension.md)
+
+Old installation details in page [lisa node installation](https://github.com/lawrence-iviani/lisa/blob/main/docs/lisa/old_nodes_installation.md) for making it up and running.
 
 ### Configuration
 
@@ -48,8 +53,8 @@ $ cd scripts
 $ python3 copy_util.py --to_lisa 
 ```
 
-* At 20201025: no alsa conf files are copied. These must be copied manually accordingly to your Audio HAT.
-*
+**At 20210119: no alsa conf files are copied. These must be copied manually accordingly to your Audio HAT.**
+See [Audio HATS](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/audio_hat.md) 
 
 ## ROS
 
