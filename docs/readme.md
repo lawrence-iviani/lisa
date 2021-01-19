@@ -9,4 +9,4 @@
 
 Skip to 
 * [Install the audio HAT](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/audio_hat.md)
-* [Install the LISA system and dependecies](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/old_nodes_installation.md)
+* [Install the LISA system and dependecies](https://github.com/lawrence-iviani/lisa/blob/main/docs/lisa/old_nodes_installation.md)
