@@ -19,15 +19,24 @@ Default credentials for a raspberry
 *password:* raspbian
 
 **Configure the raspberry**
-[sudo raspi-config](https://www.raspberrypi.org/documentation/configuration/raspi-config.md )
+
+Run [raspi-config](https://www.raspberrypi.org/documentation/configuration/raspi-config.md) to configure some raspberry configuration
+
+```batch
+sudo raspi-config
+
+```
 
 * Resized SD
 * wlan (if you consider to use wifi)
 * Network (optional, if default DHCP is fine for you)
 
+Reboot
+
 ## Bashrc
 
 In .bashrc, I usually enable:
+
 ```batch
 # some more ls aliases
 alias ll='ls -l'
@@ -47,12 +56,13 @@ sudo apt-get upgrade
 sudo apt-get install git cmake vim
 
 # install other dependencies library 
-sudo apt-get install  python3 python3-pip python3-setuptools python3-yaml libfftw3-3
+sudo apt-get install  python3 python3-pip python3-setuptools python3-yaml  virtualenv  # TODO: need to check: libfftw3-3
 **TODO: do we need  virtual env?**
 
+# TODO: TO CHECK NO!!
 # Development tools
 Install only if you consider to develop an application
-sudo apt-get install python3-dev  python3-venv  sox alsa-utils build-essential portaudio19-dev  libfftw3-dev libconfig-dev  libjson-c-dev
+# sudo apt-get install python3-dev  python3-venv  sox alsa-utils build-essential portaudio19-dev  libfftw3-dev libconfig-dev  libjson-c-dev
 
 ```
 

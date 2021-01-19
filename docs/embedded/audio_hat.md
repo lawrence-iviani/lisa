@@ -82,6 +82,20 @@ python pixels_demo.py
 VERY IMPORTANT: 
 **Remeber to copy the [ALSA asound.conf file](https://github.com/lawrence-iviani/lisa/blob/main/configuration/Respeaker_4mic_array/etc/asound.conf) in /etc/**
 
+## ReSpeaker 4-Mic Array for Raspberry Pi
+
+Copy the files in your embedded system  TODO [NOT UPDATED](https://github.com/lawrence-iviani/lisa/tree/main/configuration/Respaker%204%20mic/etc)
+[getting-started](https://wiki.seeedstudio.com/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi/#software)
+
+
+```batch
+sudo apt-get update
+sudo apt-get upgrade
+git clone https://github.com/respeaker/seeed-voicecard.git
+cd seeed-voicecard
+sudo ./install.sh  
+sudo reboot
+```
 
 # ODAS
 
