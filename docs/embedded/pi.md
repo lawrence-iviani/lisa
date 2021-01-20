@@ -8,6 +8,7 @@ All what matters the raspberry and the basic package installation:
 
 # First Run, configure the Raspberry
 
+## Get oriented
 **Find the Pi**
 Well, there can be a number of possibility. 
 I use a tool like [Advanced IP Scanner](https://www.advanced-ip-scanner.com/)
@@ -16,9 +17,9 @@ I use a tool like [Advanced IP Scanner](https://www.advanced-ip-scanner.com/)
 SSH to the IP found in the step before, with your preferred tool.
 Default credentials for a raspberry
 *User:* pi
-*password:* raspbian
+*password:* raspberry
 
-**Configure the raspberry**
+## Configure the raspberry
 
 Run [raspi-config](https://www.raspberrypi.org/documentation/configuration/raspi-config.md) to configure some raspberry configuration
 
@@ -27,9 +28,9 @@ sudo raspi-config
 
 ```
 
-* Resized SD
+* Resize the SD
 * wlan (if you consider to use wifi)
-* Network (optional, if default DHCP is fine for you)
+* Static Network (optional). Change  if default DHCP is not fine for you
 
 Reboot
 
