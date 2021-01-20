@@ -86,9 +86,7 @@ elif [ "$hardware" = "respeaker_4mic" ]; then
 	cd seeed-voicecard
 	sudo ./install.sh
 	echo "Reboot needed!!!"
-	
-	
-	echo "Reboot needed!!!"
+
 elif [ "$hardware" = "respeaker_4mic_linear" ]; then
 	echo Hw: $hardware 
 	
