@@ -1,0 +1,6 @@
+[submodule "lisa_repos/rhasspy-lisa-odas-hermes"]
+	path = lisa_repos/rhasspy-lisa-odas-hermes
+	url = https://github.com/lawrence-iviani/rhasspy-lisa-odas-hermes.git
+[submodule "lisa_repos/rhasspy-lisa-led-manager"]
+	path = lisa_repos/rhasspy-lisa-led-manager
+	url = https://github.com/lawrence-iviani/rhasspy-lisa-led-manager.git

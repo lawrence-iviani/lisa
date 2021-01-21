@@ -27,7 +27,7 @@ sudo apt-get upgrade
 sudo apt-get -y install git cmake vim
 
 # install other dependencies library 
-sudo apt-get -y install  python3 python3-pip python3-setuptools python3-yaml  virtualenv 
+sudo apt-get -y install  python3 python3-pip python3-setuptools python3-yaml  virtualenv  python3-venv
 
 
 if [ "$install_wifi" = true ]; then
