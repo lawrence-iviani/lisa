@@ -13,6 +13,13 @@ An extension with the robot was performed using:
 * [ROS](https://www.ros.org/)
 * [FlexBE](http://wiki.ros.org/flexbe)
 
+## Supported Hardware
+See [Available microphone-hats](https://github.com/lawrence-iviani/lisa/blob/main/docs/install.md#microphone-hats)
+
+* [Matrix Voice](https://matrix-io.github.io/matrix-documentation/matrix-voice/overview/)
+* [Respeaker Square Array 4 mics](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/)
+* [Respeaker Linear Array 4 mics](https://wiki.seeedstudio.com/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi/)
+
 ## Installation
 
 See in  [readme in docs](https://github.com/lawrence-iviani/lisa/blob/main/docs/readme.md) for a quick start and installation from scratch (hw included).
