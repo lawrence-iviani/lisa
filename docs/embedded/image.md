@@ -3,6 +3,10 @@
 
 # Image
 
+## Flash Tool
+
+[Win32 Disk Imager](https://sourceforge.net/projects/win32diskimager/) or  [Balena Etcher](https://www.balena.io/etcher/)
+
 ## OS
 use Raspberry imager (or any image creation tool)
  https://www.raspberrypi.org/downloads/ 
