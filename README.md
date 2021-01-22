@@ -20,7 +20,7 @@ See in  [readme in docs](https://github.com/lawrence-iviani/lisa/blob/main/docs/
 
 ## LISA SW Components
 
-TODO: Add picture 5.12
+![LISA KolBot](https://github.com/lawrence-iviani/lisa/blob/main/img/LISA-KolRob-integration.png)
 
 * [rhasspy-lisa-odas-hermes](https://github.com/lawrence-iviani/rhasspy-lisa-odas-hermes), the input module for Rhasspy. Acquire and select the track(s) and stream via Hermes protocol.
 
