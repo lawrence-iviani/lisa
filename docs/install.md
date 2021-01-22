@@ -13,10 +13,28 @@ See [Pi setup](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/p
 
 ## Microphone HATS
 
+The following HATS are supported, others should be easily implemented:
+
+* [Matrix Voice](https://matrix-io.github.io/matrix-documentation/matrix-voice/overview/)
+![Matrix](https://matrix-io.github.io/matrix-documentation/matrix-voice/img/m-2.png)
+
+* [Respeaker Square Array 4 mics](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/)
+![https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/img/overview.jpg)
+
+* [Respeaker Linear Array 4 mics](https://wiki.seeedstudio.com/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi/)
+![Linear Array Reaspeaker](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/img/main_wiki.jpg)
+
 See [Audio HATS](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/audio_hat.md) 
 
 
 # SW packages
+
+## ROS
+
+This Apply only for LISA with a ROS extension. Ths
+* [ROS on Raspberry](https://github.com/lawrence-iviani/lisa/blob/main/docs/lisa/ros_pi.md)
+
+
 
 ## LISA 
 
@@ -26,9 +44,10 @@ An integration a further development of other open sources package, the most imp
 * [ODAS](https://github.com/introlab/odas/wiki)
 * [RHASSPY](https://rhasspy.readthedocs.io/en/latest/)
 * [ROS](https://www.ros.org/)
-* FlexBE
+* [FlexBE](http://wiki.ros.org/flexbe)
 
-TODO: FIGURE 
+
+![LISA SW subsytem](https://github.com/lawrence-iviani/lisa/blob/main/img/SYSML%20SW%20Block.png)
 
 ### Installation
 
@@ -55,11 +74,6 @@ $ python3 copy_util.py --to_lisa
 
 **At 20210119: no alsa conf files are copied. These must be copied manually accordingly to your Audio HAT.**
 See [Audio HATS](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/audio_hat.md) 
-
-## ROS
-
-This Apply only for LISA with a ROS extension.
-
 
 
 # Run
