@@ -108,6 +108,6 @@ Inside cfg, adapt the following line
 
 odas_config = lisa-odas/config/lisa/CFG
 
-Where CFG = lisa_matrix.cfg || respeaker_4_mic_array.cfg
+Where CFG = lisa_matrix.cfg || respeaker_4_mic_array.cfg || respeaker_4_mic_lineararray.cfg
 ```
 
