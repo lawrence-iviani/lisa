@@ -19,7 +19,7 @@ The following HATS are supported, others should be easily implemented:
 ![Matrix](https://matrix-io.github.io/matrix-documentation/matrix-voice/img/m-2.png)
 
 * [Respeaker Square Array 4 mics](https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/)
-![https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/img/overview.jpg)
+![Squared Array Reaspeaker](https://files.seeedstudio.com/wiki/ReSpeaker-4-Mic-Array-for-Raspberry-Pi/img/overview.jpg)
 
 * [Respeaker Linear Array 4 mics](https://wiki.seeedstudio.com/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi/)
 ![Linear Array Reaspeaker](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/img/main_wiki.jpg)
@@ -31,7 +31,7 @@ See [Audio HATS](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded
 
 ## ROS
 
-This Apply only for LISA with a ROS extension. Ths
+This is a guide to install ROS Meolodic on a raspbbery and it is derived from a ROS guide.
 * [ROS on Raspberry](https://github.com/lawrence-iviani/lisa/blob/main/docs/lisa/ros_pi.md)
 
 
@@ -55,6 +55,8 @@ The following packages should be installed for setup lisa
 
 * [Rhasspy](https://github.com/lawrence-iviani/lisa/blob/main/docs/lisa/rhasspy_installation.md)
 * [Lisa Hermes Wrapper](https://github.com/lawrence-iviani/lisa/blob/main/docs/lisa/lisa.md)
+* [Lisa Led Manager](https://github.com/lawrence-iviani/rhasspy-lisa-led-manager)
+
 
 The following packages should be installed for setup lisa with a ROS extension and FlexBE status
 * [ROS Extension](https://github.com/lawrence-iviani/lisa/blob/main/docs/lisa/ros_extension.md)
