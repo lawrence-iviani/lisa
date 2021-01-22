@@ -1,32 +1,4 @@
 
-# ROS
-It is required to run a ROS node, see Lisa ROS Bridge
-
-## INSTALL
-Follow the guide in  [Installing ROS Melodic on the Raspberry Pi](http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Melodic%20on%20the%20Raspberry%20Pi), and adding the support for python3. Follow all instructions for **ROS-Comm: (recommended)**
-In general use the option -DPYTHON_EXECUTABLE=/usr/bin/python3 when using catkin_make
-
-Furhter packages needed
-
-```batch
-$ sudo pip3 install  empy rospkg catkin_pkg  defusedxml netifaces roslibpy pycryptodomex python-gnupg
-```
-
-Create the workspace to build ROS on the system (another workspace has to be created for the application).
-
-```batch
-$ mkdir -p ~/ros_build/ros_build_catkin_ws
-$ cd ~/ros_build/ros_build_catkin_ws
-$ mkdir src
-```
-
-At this point install ROS in ```/opt/ros/melodic```, and it is compiled from source (it will take sometime)
-```batch
-sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3 --install-space /opt/ros/melodic
-
-# With limited RAM reduce the number of processor and use the optin -j 2
-```
-
 # Lisa ROS Bridge
 
 In order to communicate with a ROS system a package named ROS bridge has been developed [lisa-mqtt-ros-bridge](https://github.com/lawrence-iviani/lisa-mqtt-ros-bridge). It is based on 
@@ -70,7 +42,7 @@ $ source devel/setup.bash
 
 ```
 
-## Nodes Resource Monitor
+# Nodes Resource Monitor
 
 An external tool to collect statistics about nodes usage
 Some minor modification in a couple of conversion are needed 
