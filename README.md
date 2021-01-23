@@ -43,7 +43,39 @@ See in  [readme in docs](https://github.com/lawrence-iviani/lisa/blob/main/docs/
 
 * [rhasspy-lisa-led-manager](https://github.com/lawrence-iviani/rhasspy-lisa-led-manager), led manager syncronized with the hermes protocol or API (todo).
 
+# Results
+
+Different platform was tested to determine under different condition of noise the values of:
+
+![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/setup_basic.png)
+
+* Time lantency in waking up, speech to text transcription and intent recognition.
+* Intent error Rate.
+
+![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/snr_vs_ier.png)
+![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/latency_times_source70db.png)
+
+From a usability perspective a usability test was performed with several human testers in a collaborative workspace shaerd with a [Robot (Project KolRob)](http://kolrob.de/). An application of screwing  4 screws into mechanical parts was used as reference application.
+
+[![KolRob Collabortive Screws](https://github.com/lawrence-iviani/lisa/blob/main/img/kolbot_3.png)](https://www.youtube.com/watch?v=tPZQSKHbyq8&list=PLNwYeWqirr_4pzVoIIvbSWgzg_S10A9QT&index=10)
+
+The following interaction indexes were deterimined with a video recording
+![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/FT.png)
+![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/RAD.png)
+![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/FO.png)
+
+
+And a questionnaire filled by the tester to assess the improvement with and without LISA
+
+![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/subj_validation_1.png)
+![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/subj_validation_2.png)
+![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/subj_validation_3.png)
+
+Data link, Coming soon!
+
 # External SW Components
+
+The most notable components used integrated in LISA are:
 
 ## ODAS
 [ODAS](https://github.com/introlab/odas) stands for Open embeddeD Audition System. This is a library dedicated to perform sound source localization, tracking, separation and post-filtering. ODAS is coded entirely in C, for more portability, and is optimized to run easily on low-cost embedded hardware. ODAS is free and open source.
@@ -69,6 +101,4 @@ Only evaluated:
 
 Documentation for installation, usage, and training models is available on [deepspeech.readthedocs.io](http://deepspeech.readthedocs.io/?badge=latest)
 
-# Results
 
-In Processing ;)
