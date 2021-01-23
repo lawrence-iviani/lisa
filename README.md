@@ -60,16 +60,17 @@ From a usability perspective a usability test was performed with several human t
 [![KolRob Collabortive Screws](https://github.com/lawrence-iviani/lisa/blob/main/img/kolbot_3.png)](https://www.youtube.com/watch?v=tPZQSKHbyq8&list=PLNwYeWqirr_4pzVoIIvbSWgzg_S10A9QT&index=10)
 
 The following interaction indexes were deterimined with a video recording
-![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/FT.png)
-![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/RAD.png)
-![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/FO.png)
+
+![Free Time](https://github.com/lawrence-iviani/lisa/blob/main/img/FT.png)
+![Robot Attention Demand](https://github.com/lawrence-iviani/lisa/blob/main/img/RAD.png)
+![Fanout](https://github.com/lawrence-iviani/lisa/blob/main/img/FANOUT.png)
 
 
 And a questionnaire filled by the tester to assess the improvement with and without LISA
 
-![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/subj_validation_1.png)
-![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/subj_validation_2.png)
-![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/subj_validation_3.png)
+![Subjective Evaluation without Acoustic Channel](https://github.com/lawrence-iviani/lisa/blob/main/img/subj_validation_1.png)
+![Subjective Evaluation with Acoustic Channel](https://github.com/lawrence-iviani/lisa/blob/main/img/subj_validation_2.png)
+![Subjective Improvement](https://github.com/lawrence-iviani/lisa/blob/main/img/subj_validation_3.png)
 
 Data link, Coming soon!
 
