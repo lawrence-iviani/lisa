@@ -55,7 +55,7 @@ Different platform was tested to determine under different condition of noise th
 ![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/snr_vs_ier.png)
 ![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/latency_times_source70db.png)
 
-From a usability perspective a usability test was performed with several human testers in a collaborative workspace shaerd with a [Robot (Project KolRob)](http://kolrob.de/). An application of screwing  4 screws into mechanical parts was used as reference application.
+From a usability perspective a usability test was performed with several human testers in a collaborative workspace shaerd with a [Robot (Project KolRob)](http://kolrob.de/). An application of screwing  4 screws into mechanical parts was used as reference application (click on imnage for a video link).
 
 [![KolRob Collabortive Screws](https://github.com/lawrence-iviani/lisa/blob/main/img/kolbot_3.png)](https://www.youtube.com/watch?v=tPZQSKHbyq8&list=PLNwYeWqirr_4pzVoIIvbSWgzg_S10A9QT&index=10)
 
