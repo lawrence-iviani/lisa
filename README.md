@@ -83,7 +83,7 @@ And a questionnaire filled by the tester to assess the improvement with and with
 ![Subjective Evaluation with Acoustic Channel](https://github.com/lawrence-iviani/lisa/blob/main/img/subj_validation_2.png)
 ![Subjective Improvement](https://github.com/lawrence-iviani/lisa/blob/main/img/subj_validation_3.png)
 
-Link to [test profiler](https://github.com/lawrence-iviani/lisa_profiler) and [data]()
+Link to [test profiler](https://github.com/lawrence-iviani/lisa_profiler) containing the acquisition, processing, results, and the original data.
 
 Video examples:
 
