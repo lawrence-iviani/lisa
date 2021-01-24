@@ -1,5 +1,5 @@
 # Lisa
-Documentation repos for LISA, Listen and Infere Sound Automa.
+Documentation repos for LISA, Listen and Infere Sound Automa. A short presentation is available [here](https://www.dropbox.com/s/1ddzlee5ejinccg/liviani_defense_presentation_hires.pdf?dl=0)
 ![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/lisa_logo_%201_lr.png)
 
 Lisa is embodied as a concurrent systems of nodes using MQTT and the Hermes Protocol. A wrapper to interact with ROS systems is available.
@@ -72,7 +72,13 @@ And a questionnaire filled by the tester to assess the improvement with and with
 ![Subjective Evaluation with Acoustic Channel](https://github.com/lawrence-iviani/lisa/blob/main/img/subj_validation_2.png)
 ![Subjective Improvement](https://github.com/lawrence-iviani/lisa/blob/main/img/subj_validation_3.png)
 
-Data link, Coming soon!
+Link to [test profiler](https://github.com/lawrence-iviani/lisa_profiler) and [data]()
+
+Video examples:
+
+* As input command device with [RQT example](https://www.dropbox.com/home/video%20lisa?preview=RQT_1.avi)
+* As operator with [acoustic interaction input](https://www.dropbox.com/s/i7w6ukjgry3g6cm/operator_kolrob.avi?dl=0)
+
 
 # External SW Components
 
