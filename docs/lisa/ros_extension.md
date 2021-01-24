@@ -23,6 +23,13 @@ $ catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 ## Install dependecies
 
+For python, better to setup the environment manually (it is not properly called with catkin (not sure where the problem is).
+
+```batch
+cd ~/sw/lisa_catkin_ws/src/lisa-mqtt-ros-bridge 
+sudo pip3 setup.py install
+```
+
 ```batch
 cd ~/sw/lisa_catkin_ws/src
 $ git clone https://github.com/ros/common_msgs.git
