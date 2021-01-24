@@ -54,16 +54,18 @@ See the README in [repos](https://github.com/lawrence-iviani/rhasspy-lisa-odas-h
 
 #### Production
 
+Change version and architecture accordingly
+
 ```batch
 	cd ~
 	mkdir -p  sw
 	cd sw
 	echo "Rhasspy is installed with bimnaries" 
-	wget  https://github.com/rhasspy/rhasspy/releases/download/v"$rh_binaries_version"/rhasspy_"$rh_binaries_version"_"$arch".deb
-	sudo apt -y install ./rhasspy_"$rh_binaries_version"_"$arch".deb
+	wget  https://github.com/rhasspy/rhasspy/releases/download/v2.5.9/rhasspy_2.5.9_armhf.deb
+	sudo apt -y install ./rhasspy_2.5.9_armhf.deb
 	
-	echo "from command line run rhasspy and one of the available language profiles (eg en | de | it | .....)"
-	echo "$ rhasspy -p en"
+	# from command line run rhasspy and one of the available language profiles (eg en | de | it | .....)"
+	rhasspy -p en
 ```
 
 ## Lisa 
@@ -83,7 +85,13 @@ sudo apt -y libconfig-dev
 
 # json for C
 sudo apt -y libjson-c-dev
+```
 
+## Installing rhasspy-lisa-odas-hermes
+
+Install [rhasspy-lisa-odas-hermes](https://github.com/lawrence-iviani/rhasspy-lisa-odas-hermes) and  [lisa-odas](https://github.com/lawrence-iviani/lisa-odas)
+
+```batch
 cd ~
 mkdir -p sw
 cd sw
@@ -101,13 +109,6 @@ cd ../..
 make install
 cd ..
 
-# LISA  LED
-git clone https://github.com/lawrence-iviani/rhasspy-lisa-led-manager.git
-cd rhasspy-lisa-led-manager
-ln -s ../rhasspy-lisa-odas-hermes/lisa/ lisa
-./configure
-make
-make install
 ```
 
 ## Configuration
@@ -121,37 +122,34 @@ As mentioned in [https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded
 
 **VERY IMPORTANT: Remeber to copy the ALSA asound.conf file in /etc/**
 
-Finally, remeber to configure lisa with the proper ODAS file (depending on HW)
+Finally, remeber to configure lisa with the proper ODAS file (depending on HW) in rhasspy_lisa_odas_hermes/config/lisa.cfg
 
-```batch
-
-if [ "$hardware" = "matrix_voice" ]; then
-	echo Hw: $hardware 
-	sudo cp ../configuration/Matrix_Voice/etc/asound.conf /etc/asound.conf
-	echo "IMPORTANT!!!! in rhasspy_lisa_odas_hermes/config/lisa.cfg set:"
-	echo "odas_config = lisa-odas/config/lisa/lisa_matrix.cfg"
+* matrix_voice _odas_config = lisa-odas/config/lisa/lisa_matrix.cfg_
+* respeaker_4mic _odas_config = lisa-odas/config/lisa/respeaker_4_mic_array.cfg_
+* respeaker_4mic_linear _odas_config = lisa-odas/config/lisa/respeaker_4_mic_lineararray.cfg_
 	
-elif [ "$hardware" = "respeaker_4mic" ]; then
-	echo Hw: $hardware 
-	sudo cp ../configuration/Respeaker_4mic_array/etc/asound.conf /etc/asound.conf
-	echo "IMPORTANT!!!!  in rhasspy_lisa_odas_hermes/config/lisa.cfg set:"
-	echo "odas_config = lisa-odas/config/lisa/respeaker_4_mic_array.cfg"
 
-elif [ "$hardware" = "respeaker_4mic_linear" ]; then
-	echo Hw: $hardware 
-	sudo cp ../configuration/Respeaker_4mic_array/etc/asound.conf /etc/asound.conf
-	echo "IMPORTANT!!!!  in rhasspy_lisa_odas_hermes/config/lisa.cfg set:"
-	echo "odas_config = lisa-odas/config/lisa/respeaker_4_mic_lineararray.cfg"
-
-fi
-```
 
 ## Lisa ROS Bridge
 
-In order to communicate with a ROS system a package named ROS bridge has been developed [lisa-mqtt-ros-bridge](https://github.com/lawrence-iviani/lisa-mqtt-ros-bridge). It is based on 
+In order to communicate with a ROS system a package named ROS bridge has been developed [lisa-mqtt-ros-bridge](https://github.com/lawrence-iviani/lisa-mqtt-ros-bridge). See [page ros extension](https://github.com/lawrence-iviani/lisa/blob/main/docs/lisa/ros_extension.md)
 
 
 ## Lisa Led Manager
 
-Installed 
-See: [rhasspy-lisa-led-manager](https://github.com/lawrence-iviani/rhasspy-lisa-led-manager)
+See: [rhasspy-lisa-led-manager](https://github.com/lawrence-iviani/rhasspy-lisa-led-manager) for options
+
+```batch
+cd ~
+mkdir -p sw
+cd sw
+
+# LISA  LED
+git clone https://github.com/lawrence-iviani/rhasspy-lisa-led-manager.git
+cd rhasspy-lisa-led-manager
+ln -s ../rhasspy-lisa-odas-hermes/lisa/ lisa
+./configure
+make
+make install
+```
+
