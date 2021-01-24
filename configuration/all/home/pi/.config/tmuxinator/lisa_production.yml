@@ -1,5 +1,6 @@
 # /home/pi/.config/tmuxinator/lisa_rhasspy_full_start.yml
 
+
 name: lisa_rhasspy_full_start
 root: ~/
 
@@ -9,9 +10,10 @@ root: ~/
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
 
+
 # Project hooks
 # Runs on project start, always
-# on_project_start: command
+# on_project_start:  
 # Run on project start, the first time
 # on_project_first_start: command
 # Run on project start, after the first time
@@ -25,7 +27,8 @@ root: ~/
 # pre_window: rbenv shell 2.0.0-p247
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
-# tmux_options: -f ~/.tmux.mac.conf
+# tmux_options: -f ~/.tmux.conf
+# pre_window: tmux source ~/.tmux.conf
 
 # Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
 # tmux_command: byobu
@@ -39,16 +42,16 @@ root: ~/
 # Controls whether the tmux session should be attached to automatically. Defaults to true.
 # attach: false
 
+
+
 # Runs after everything. Use it to attach to tmux with custom options etc.
 # post: tmux -CC attach -t lisa_rhasspy_full_start
 #common:
-#  before_commands:
-#    - source ~/.bashrc
-#    - export ROS_MASTER_URI=http://192.168.0.104:11311
-#    - export ROS_IP=192.168.0.104
-
+# before_commands:
+  
 pre_window:
-        - source ~/.bashrc && export ROS_MASTER_URI=http://192.168.1.43:11311 && export ROS_IP=192.168.1.151
+  - source ~/.bashrc && source ~/sw/lisa_catkin_ws/devel/setup.bash  && tmux set-option -ga update-environment 'LISA_PLATFORM LISA_LED_PATTERN ROS_MASTER_URI ROS_IP RH_SESSION' 
+  
 windows:
   - rhasspy:
       layout: main-vertical
@@ -56,15 +59,20 @@ windows:
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - ~/dev/rhasspy/rhasspy.sh -p en
+        - rhasspy -p $RH_SESSION
         - sleep 5 && docker run -it -p 59125:59125 synesthesiam/marytts:5.2
   - rhasspy-lisa:
-      layout: main-vertical
+      layout: even-vertical
       panes:
-         - sleep 5 && cd ~/dev/rhasspy-lisa-odas-hermes && bin/rhasspy-lisa-odas-hermes --port 12183 --channel 4
-         - sleep 10 && rosrun lisa-mqtt-ros-bridge bridge-node.py # :--call_intent_service
+         - sleep 10 && cd ~/sw/rhasspy-lisa-odas-hermes && bin/rhasspy-lisa-odas-hermes --port 12183 --demux #--channel 4
+         - sleep 15 && rosrun lisa-mqtt-ros-bridge bridge-node.py # :--call_intent_service
+         - sleep 10 && cd ~/sw/rhasspy-lisa-led-manager && bin/rhasspy-lisa-led-manager --port 12183 --hw-board $LISA_PLATFORM --led-pattern $LISA_LED_PATTERN
   - console:
-      layout: main-vertical
+      layout: even-vertical
       panes:
          - cat ~/.tmux.conf
-
+  - console_2:
+      layout: even-vertical
+      panes:
+         - cat ~/.tmux.conf
+ 

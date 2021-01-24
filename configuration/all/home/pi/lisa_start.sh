@@ -2,7 +2,7 @@
 # Try to find a clever way to pass arguments to tmux script.
 # All try i did with tmux failed, so the only feasible way to avoid scripts multiplication seems to use env variable
 
-default_session="lisa_rhasspy_full_start"
+default_session="lisa_production"
 default_platform="DummyBoard"
 default_pattern="Alexa"
 default_ros_master_ip="192.168.0.104:11311"
@@ -29,7 +29,7 @@ do
     if [ "$ARGUMENT" = "help" ]; then
 		echo "Usage: ./lisa_start [help] || [$in_arg_session=TMUX_SESSION] [$in_arg_platform=BOARD] [$in_arg_pattern=LED_PATTERN] [$in_arg_ros_master_ip=ROS_MASTER_IP]  [$in_arg_rh_profile=RHASSPY_PROFILE]  "
 		echo "		help: print this help and exit. "
-		echo "		TMUX_SESSION: lisa_rhasspy_full_start|lisa_rhasspy_full_start_LAB (Optional)"
+		echo "		TMUX_SESSION: lisa_production|lisa_dev (Optional)"
 		echo "		BOARD: Respeaker4MicArray|MatrixVoice|DummyBoard (Optional)"
 		echo "		LED_PATTERN: GoogleHome|Alexa (Optional)"
 		echo "		ROS_MASTER_IP: the ip of the ros master to connect, in the form ip:port (e.g 192.168.0.104:11311)"
