@@ -1,8 +1,17 @@
 # Lisa
-Documentation repos for LISA, Listen and Infere Sound Automa. A short presentation is available [here](https://www.dropbox.com/s/1ddzlee5ejinccg/liviani_defense_presentation_hires.pdf?dl=0)
+Documentation repos for LISA, Listen and Infer Sound Automa. A short presentation is available [here](https://www.dropbox.com/s/1ddzlee5ejinccg/liviani_defense_presentation_hires.pdf?dl=0)
+
+Lisa is an acoustic platform running on Raspberry PI, the main target is enable a dual direction of speech in both directions. The main feature can be seen:
+* Offline computation (no access to external services). Privacy and Availability
+* Robust to environmental noise
+* Command input (vs open transcription) oriented
+* Modular design
+
+LISA is embodied as a concurrent systems of nodes using MQTT and the Hermes Protocol. A wrapper to interact with ROS systems is available.
+
 ![Lisa Logo](https://github.com/lawrence-iviani/lisa/blob/main/img/lisa_logo_%201_lr.png)
 
-Lisa is embodied as a concurrent systems of nodes using MQTT and the Hermes Protocol. A wrapper to interact with ROS systems is available.
+
 An integration a further development of other open sources package, the most important:
 
 * [ODAS](https://github.com/introlab/odas/wiki)
