@@ -1,7 +1,7 @@
 # /home/pi/.config/tmuxinator/lisa_rhasspy_full_start.yml
 
 
-name: lisa_rhasspy_full_start
+name: lisa_production
 root: ~/
 
 # Optional tmux socket
