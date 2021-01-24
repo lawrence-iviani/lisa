@@ -80,6 +80,9 @@ $ python3 copy_util.py --to_lisa
 See [Audio HATS](https://github.com/lawrence-iviani/lisa/blob/main/docs/embedded/audio_hat.md) 
 
 
+**At 20210119: link for supported profiles in rhasspy working directory are not created (rqt and Motek_2018).** For this reason rhasspy will fail to load at a startup. 
+_TODO: need for explanation_
+
 # Run
 
 * Be sure you have installed Tmuxinator, see See [install tmuxinator](https://github.com/lawrence-iviani/lisa/blob/main/embedded/install.md#tmuxinator)
