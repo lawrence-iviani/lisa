@@ -1,11 +1,13 @@
 # Lisa
 Documentation repos for LISA, Listen and Infer Sound Automa. A short presentation is available [here](https://www.dropbox.com/s/1ddzlee5ejinccg/liviani_defense_presentation_hires.pdf?dl=0)
 
-Lisa is an acoustic platform running on Raspberry PI, the main target is enable a dual direction of speech in both directions. The main feature can be seen:
+Lisa is an acoustic platform running on Raspberry PI, the main target is enable a dual direction of speech in both directions. The main features are:
 * Offline computation (no access to external services). Privacy and Availability
+* Tracking sources' Direction of Arrival
 * Robust to environmental noise
+* ROS interface for robotics applications
 * Command input (vs open transcription) oriented
-* Modular design
+* Modular design for future non speech sound recognition 
 
 LISA is embodied as a concurrent systems of nodes using MQTT and the Hermes Protocol. A wrapper to interact with ROS systems is available.
 
