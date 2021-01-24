@@ -19,7 +19,7 @@ See the README in [repos](https://github.com/lawrence-iviani/rhasspy-lisa-odas-h
 	sudo apt-get -y install portaudio19-dev libatlas-base-dev swig 
 	
 	## You should have something like this installed. Sometimes install automatically.
-	# sudo apt-get -y install  libatlas-base-dev swig supervisor mosquitto sox alsa-utils libgfortran4 espeak flite perl curl patchelf ca-certificates libttspico-utils
+	# sudo apt-get -y install  libatlas-base-dev swig supervisor mosquitto sox alsa-utils libgfortran4 espeak flite perl curl patchelf ca-certificates libttspico-utils llvm
 
 	## Create a sw folder
 	# Note: most of the configuration are independent from the location, but some could fail
