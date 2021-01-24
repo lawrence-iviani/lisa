@@ -2,6 +2,8 @@
 
 # RHASSPY
 
+**OBSOLETE AND INACCURATE**
+
 [Project](https://rhasspy.readthedocs.io/en/latest/) [github](https://github.com/rhasspy/rhasspy)
 
 Several possibility are available, suggested for production is from [pre-compiled packages 32-bit and 64-bit](https://rhasspy.readthedocs.io/en/latest/installation/#debian)
