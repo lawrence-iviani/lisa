@@ -97,14 +97,15 @@ Enjoy, simply use:
 ```batch
 # With LISA_PLATFORM one of the supported boards (Matrix Voice, Respeaker 4 Mic)
 # With LISA_LED_PATTERN one of the supported led patterns (GoogleHome, Amazon). These are imitations from [4MICs HAT for Raspberry Pi](https://github.com/respeaker/4mics_hat)
-$ tmuxinator start lisa_rhasspy_full_start.yml  --hw-board LISA_PLATFORM --led-pattern LISA_LED_PATTERN
+# The follow env variables are used LISA_PLATFORM LISA_LED_PATTERN ROS_MASTER_URI ROS_IP RH_SESSION
+$ tmuxinator start lisa_dev.yml  
 
 # in ~ a lisa_start.sh and lisa_stop.sh are used for quick start
 $ cd ~
 $ ./lisa_start.sh help
 Usage: ./lisa_start [help] || [session_name=TMUX_SESSION] [platform=BOARD] [led_pattern=LED_PATTERN] [ros_master=ROS_MASTER_IP]  [rhasspy_profile=RHASSPY_PROFILE]
                 help: print this help and exit.
-                TMUX_SESSION: lisa_rhasspy_full_start|lisa_rhasspy_full_start_LAB (Optional)
+                TMUX_SESSION: lisa_production|lisa_dev (Optional)
                 BOARD: Respeaker4MicArray|MatrixVoice|DummyBoard (Optional)
                 LED_PATTERN: GoogleHome|Alexa (Optional)
                 ROS_MASTER_IP: the ip of the ros master to connect, in the form ip:port (e.g 192.168.0.104:11311)
