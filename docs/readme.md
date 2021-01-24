@@ -81,6 +81,27 @@ cd lisa/scripts
 ./install_lisa_ros.sh
 ```
 
+## Run
+
+In home two scripts are available:
+* lisa_start.sh 
+* lisa_stop.sh (this kill all processes, not the tmux session)
+
+```batch
+
+$ cd ~
+$ ./lisa_start.sh help
+Usage: ./lisa_start [help] || [session_name=TMUX_SESSION] [platform=BOARD] [led_pattern=LED_PATTERN] [ros_master=ROS_MASTER_IP]  [rhasspy_profile=RHASSPY_PROFILE]
+                help: print this help and exit.
+                TMUX_SESSION: lisa_production|lisa_dev (Optional)
+                BOARD: Respeaker4MicArray|MatrixVoice|DummyBoard (Optional)
+                LED_PATTERN: GoogleHome|Alexa (Optional)
+                ROS_MASTER_IP: the ip of the ros master to connect, in the form ip:port (e.g 192.168.0.104:11311)
+                RHASSPY_PROFILE: the name of the rhasspy profile to load (deafault is en, at the moment rqt and Motek_2018 are possible candidates)
+
+
+```
+
 ## References
 
 
