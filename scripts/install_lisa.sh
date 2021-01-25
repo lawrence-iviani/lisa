@@ -17,22 +17,19 @@ arch="armhf"
 
 ## RH development  version (only if  rh_binaries set to false)
 # Use the virutal environment... this needs more verification. when set to true, it doesnt work
-virtual_env=false
+virtual_env=true
 # Decide which branch to download
-rh_tag_branch="v2.5.7"
+rh_tag_branch="v2.5.9"
 
 
 # Available  HATS
 hardware="respeaker_4mic_linear" # "respeaker_4mic" "matrix_voice" 
-
-
 
 ##################################
 #### End Configuration Option ####
 ##################################
 
 cwd=$(pwd)
-
 
 echo "######################"
 echo "#### DEPENDENCIES ####"
@@ -75,7 +72,12 @@ else
 	echo "Rhasspy is with repository" 
 	
 	# install dep
-	sudo apt-get -y install portaudio19-dev libatlas-base-dev swig 
+	sudo apt-get -y install \
+       python3 python3-dev python3-setuptools python3-pip python3-venv \
+       git build-essential libatlas-base-dev swig portaudio19-dev \
+       supervisor mosquitto sox alsa-utils libgfortran4 libopenblas-dev \
+       espeak flite \
+       perl curl patchelf ca-certificates
 	
 	## You should have something like this installed. Sometimes install automatically.
 	# sudo apt-get -y install  libatlas-base-dev swig supervisor mosquitto sox alsa-utils libgfortran4 espeak flite perl curl patchelf ca-certificates libttspico-utils
@@ -97,10 +99,10 @@ else
 		echo "CHECK!!! A weird behviour in PIP is noticed, it installs all version of the same package..... Not sure what is going on"
 		# rhasspy run in virtual env
 		# probably it is necessary to change 
-		./configure    --disable-pocketsphinx  --disable-julius  --disable-wavenet      --disable-precise  --disable-raven  --disable-porcupine  --disable-precise 
+		./configure  --enable-in-place  --disable-pocketsphinx  --disable-julius  --disable-wavenet      --disable-precise  --disable-raven  --disable-porcupine  --disable-precise   --disable-larynx
 	else
 		# Use the system environment
-		./configure --enable-in-place --disable-virtualenv    --disable-pocketsphinx  --disable-julius  --disable-wavenet     --disable-precise  --disable-raven  --disable-porcupine  --disable-precise 
+		./configure --enable-in-place --disable-virtualenv    --disable-pocketsphinx  --disable-julius  --disable-wavenet     --disable-precise  --disable-raven  --disable-porcupine  --disable-precise  --disable-larynx
 		# Note: possily some requirements has to be satisfied manually
 	fi
 	
