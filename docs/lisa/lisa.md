@@ -34,16 +34,15 @@ See the README in [repos](https://github.com/lawrence-iviani/rhasspy-lisa-odas-h
 
 	## Use one of the two options
 	
-	if [ "$virtual_env" = true ]; then
-		echo "CHECK!!! A weird behviour in PIP is noticed, it installs all version of the same package..... Not sure what is going on"
-		# rhasspy run in virtual env
-		# probably it is necessary to change 
-		./configure    --disable-pocketsphinx  --disable-julius  --disable-wavenet      --disable-precise  --disable-raven  --disable-porcupine  --disable-precise 
-	else
-		# Use the system environment
-		./configure --enable-in-place --disable-virtualenv    --disable-pocketsphinx  --disable-julius  --disable-wavenet     --disable-precise  --disable-raven  --disable-porcupine  --disable-precise 
-		# Note: possily some requirements has to be satisfied manually
-	fi
+	# 1. With virtual environment (default in script)	
+	./configure   --enable-in-place  --disable-pocketsphinx  --disable-julius  --disable-wavenet      --disable-precise  --disable-raven  --disable-porcupine  --disable-precise --disable-larynx
+
+	## OR!!!
+	
+	# 2. disable virtual environment	
+	./configure --enable-in-place --disable-virtualenv    --disable-pocketsphinx  --disable-julius  --disable-wavenet     --disable-precise  --disable-raven  --disable-porcupine  --disable-precise  --disable-larynx
+	
+	# there is an issue on pi to build the system with larynx, it should be disabled ---->>>> --disable-larynx
 	
 
 	# for both
